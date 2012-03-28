@@ -1,0 +1,17 @@
+function find_kth_largest(Array L, Integer k)
+  PriorityQueue S; //Create a new PriorityQueue to hold k largest elements of S
+  loop through first k elements of L:
+    x = current element of L
+    push x onto S and then remove it from L
+  end
+  //S now contains first k elements of L, sorted in a heap.
+  loop through remaining elements of L:
+    var x = current element of L(Remove)
+    var y = lowest element of S
+    if x>y:
+      Remove y
+      Push x onto S
+    end
+  return smallest element of S
+end
+  

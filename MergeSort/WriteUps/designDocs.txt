@@ -1,0 +1,17 @@
+Algorithm:
+MergeSort with Recursion:
+MergeSort will call MergeSort on it's 1st half and on it's second half and then call merge on the entire length of the array, with a left, center+1, and right given.
+Each MergeSort called by MergeSort will do the same.
+
+MergeSort without recursion:
+Given the initial size, get the left(0), and right(Size-1).
+In a loop, run through the parts of your array, and while right is greater than left,append the coordinates of [left, center+1, right] to a stack(This stack will contain the coordinates you will be calling merge with, in reverse order so they can just be popped off to call them at the end.
+Also, if you have not reached the end of an array(size of 1), you will add these array coordinates to the backstack.  Once the loop gets to the end of an array, it will go back and pop the last value off of the backstack, and search using (left, center), instead of (center, right).
+After it works it's way through the entire array like this, sorting it, it will go back through the mergestack, calling merge on each set of coordinates.
+
+Attached is some pseudo code I wrote in python formatting.  It was tested by having python print out the merge call rather than actually calling it. 
+I have also attached some short code written in python that uses recursion with mergeSort.  It was modified slightly, so that it printed merge(left, center+1, right), instead of calling it, which allowed me to see what it would call.
+This is also how I was able to trace the activation stack.
+I was able to compare the outputs between my non-recursive mergeSort with the recursive, to ensure it was calling merge in the correct way. 
+These files are "pseudoMergeSort.py" and "mergeSortStack.py"
+

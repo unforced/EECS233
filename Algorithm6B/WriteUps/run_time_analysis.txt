@@ -1,0 +1,5 @@
+Algorithm 6A has a running time of O(N+klogN).
+Algorithm 6B has a running time of O(Nlogk).
+Assuming a value of N = 100, and k = 10.  6A is ~166 steps. 6B is ~332 steps, or twice of 6A.
+However, for much higher k, such as N = 100, and k = 99, 6A is 757 steps and 6B is 662 steps.
+Therefore, for large values of N, 6B is more efficient, but for small values, 6A is more efficient.

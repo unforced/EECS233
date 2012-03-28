@@ -1,0 +1,38 @@
+The following activation stacks were created using a mergeSort created with some python code.  This code is found in mergeSortStack.py.
+
+Here is the activation stack of a mergeSort with length 8.
+
+Length of 8
+mergeSort(0, 3)
+mergeSort(0, 1)
+mergeSort(0, 0)
+mergeSort(1, 1)
+Merge(0, 1, 1)
+mergeSort(2, 3)
+mergeSort(2, 2)
+mergeSort(3, 3)
+Merge(2, 3, 3)
+Merge(0, 2, 3)
+mergeSort(4, 7)
+mergeSort(4, 5)
+mergeSort(4, 4)
+mergeSort(5, 5)
+Merge(4, 5, 5)
+mergeSort(6, 7)
+mergeSort(6, 6)
+mergeSort(7, 7)
+Merge(6, 7, 7)
+Merge(4, 6, 7)
+Merge(0, 4, 7)
+
+
+This is the activation stack of a mergeSort of length 8.  This one only includes the calls to merge, because the calls to mergeSorts serve to do nothing besides calling merge.
+Length of 8 without printing mergeSorts
+Merge(0, 1, 1)
+Merge(2, 3, 3)
+Merge(0, 2, 3)
+Merge(4, 5, 5)
+Merge(6, 7, 7)
+Merge(4, 6, 7)
+Merge(0, 4, 7)
+
